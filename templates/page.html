@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Page</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contents">
+        {% if yes_pressed %}
+            <img src="/static/mochi-mochi-peach-cat-tap-butt.gif"
+                 alt="Один котик б'є іншого котика по дупці"/>
+            <h1>Ура!!!</h1>
+            <p>З днем Святого Валентина тебе, коханий. Я дуже люблю тебе і дуже ціную твою любов. Ти найкращий. :*</p>
+        {% else %}
+            <img src="/static/duck-cute.gif" style="scale: 75%"
+                 alt="Гіфка з уточкою."/>
+            <h1>Чи будеш ти моєю валентинкою цього року?</h1>
+            <div class="row">
+                <form method="post">
+                    <button name="yes_button">Так</button>
+                    <button name="no_button" {% if disable_no_button %}disabled{% endif %}>{{ no_button_text }}</button>
+                    <input type="hidden" name="no_count" value="{{ no_count }}">
+                </form>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

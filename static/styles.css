@@ -1,0 +1,33 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    text-align: center;
+    background-color: #FED9ED;
+    background-position: center;
+    color: #402B3A
+}
+
+button {
+    height: 75px;
+    width: 200px;
+    background-color: #E7BCDE;
+    color: #B0578D;
+    border: none;
+    font-family: "Roboto", serif;
+}
+
+.row {
+    justify-content: center !important;
+    display: flex;
+}
+
+h1 {
+    font-family: Pacifico, serif;
+}
+
+p {
+    font-family: "Roboto", serif;
+}
